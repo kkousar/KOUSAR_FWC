@@ -1,0 +1,135 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage[none]{hyphenat}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{caption} 
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{stix}
+
+
+\title{\textbf{\\Line Assignment}}
+\author{kanekal kousar}
+\date{September 2022}
+\begin{document}
+\maketitle
+
+
+\section{Question}
+\textbf{\textit{Class 11, Exercise 10.1, Q(9):} Without using distance formula, show that points (– 2, – 1), (4, 0), (3, 3) and (–3, 2)are the vertices of a parallelogram.}
+
+\section{Solution}
+\raggedright 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{fig/paralellogram.png} 
+\caption{paralellogram ABCD}
+\end{figure}
+
+\vspace{0.25cm}
+We can prove that the points are the vertices of a parallelogram if  \textbf{AB} || \textbf{DC} ,and \textbf{BC} || \textbf{AD}.
+\vspace{0.3cm}
+
+\textbf{Theorm:}if $\theta$ is the angle between $\vec{a}$ and $\vec{b}$,then
+
+\hspace{3cm}
+\boldmath
+	$|\vec{a}\times \vec{b}|=|\vec{a}|| \vec{b}|cos\theta$
+\unboldmath
+\vspace{0.25cm}
+\textbf{corollary:}The two non-zero vectors $\vec{a}$ and $\vec{b}$ are parallel to each other,if their product is a zero vector
+
+
+Consider  Parallelogram ABCD,where
+
+$ \vec{A}$ =$\begin{pmatrix}-2 \\ -1 \\ \end{pmatrix}$ \hspace{0.3cm} $ \vec{B} $=$\begin{pmatrix} 4\\ 0 \\ \end{pmatrix}$ 
+
+$ \vec{C} $=$\begin{pmatrix}3 \\ 3 \\ \end{pmatrix}$ \hspace{0.3cm} $ \vec{D} $=$\begin{pmatrix}-3 \\ 2 \\ \end{pmatrix}$ 
+\vspace{0.2cm}
+
+
+let
+
+$ \vec{P} =\vec{B}-\vec{A}=\begin{pmatrix}6 \\ 1 \\ \end{pmatrix}$ \hspace{0.3cm}$ \vec{Q}= \vec{C}-\vec{D}=\begin{pmatrix}6 \\ 1 \\ \end{pmatrix}$ 
+
+$ \vec{R} = \vec{A}-\vec{C}=\begin{pmatrix}1 \\ -3 \\ \end{pmatrix}$ \hspace{0.3cm}$ \vec{S}= \vec{A}-\vec{D}=\begin{pmatrix}1 \\ -3 \\ \end{pmatrix}$ 
+
+\subsection{\underline{proof for  \textbf{AB} || \textbf{DC}}}
+\boldmath
+$ \vec{P}\times \vec{Q}=|(\vec{B}-\vec{A})\times (\vec{C}-\vec{D}))|$
+$ = \begin{vmatrix}
+           \hat{i} & \hat{j}\\
+            6 & 1\\
+            6 & 1
+    \end{vmatrix} = {0\hat{k}}  $
+\vspace{0.2cm}
+$ |\vec{P}\times \vec{Q}|=||(\vec{B}-\vec{A})\times (\vec{C}-\vec{D})||=0$
+\unboldmath
+
+so,according to corollary AB||CD
+
+
+\subsection{\underline{proof for  \textbf{BC} || \textbf{AD}}}
+\boldmath
+$\vec{P}\times \vec{Q}=|(\vec{B}-\vec{C})\times (\vec{A}-\vec{D})|$
+$ = \begin{vmatrix}
+           \hat{i} & \hat{j}\\
+            1 & -3\\
+            1 & -3
+    \end{vmatrix} = {0\hat{k}}  $
+
+$|\vec{P}\times \vec{Q}|=||(\vec{B}-\vec{C})\times (\vec{A}-\vec{D})||=0$
+\unboldmath
+
+so,according to corollary BC||AD
+\vspace{0.3cm}
+
+since the opposite lines are parallel the points (– 2, – 1), (4, 0), (3, 3) and (–3, 2) forms the vertices of a parallelogram
+\vspace{0.2cm}
+\section*{Construction}
+\centering
+\vspace{0.2cm}
+{
+\setlength\extrarowheight{2pt}
+\begin{tabular}{|c|c|c|}
+	\hline
+	\textbf{Symbol}&\textbf{Value}&\textbf{Description}\\
+	\hline
+	$\vec{A}$ & $\begin{pmatrix}-2 \\ -1 \\ \end{pmatrix}$ & Vertex A\\
+	\hline
+	$\vec{B}$ & $\begin{pmatrix}4 \\ 0 \\ \end{pmatrix}$ & Vertex B\\
+	\hline
+	$\vec{C}$& $\begin{pmatrix}3 \\ 3 \\ \end{pmatrix}$ & Vertex C\\
+	\hline
+	$\vec{D}$ & $\begin{pmatrix}-3 \\ 2 \\ \end{pmatrix}$ & Vertex D\\
+	\hline
+	$\vec{P}$ &$\begin{pmatrix}1 \\ 6 \\ \end{pmatrix}$&vector AB\\
+	\hline
+	$\vec{Q}$ &$\begin{pmatrix}1 \\ 6 \\ \end{pmatrix}$&vector DC\\
+	\hline
+	$\vec{R}$ &$\begin{pmatrix}1 \\ -3 \\ \end{pmatrix}$&vector BC\\
+	\hline
+	$\vec{S}$ &$\begin{pmatrix}1 \\ -3 \\ \end{pmatrix}$&vector AD\\
+	\hline
+\end{tabular}
+}
+
+\vspace{0.6cm}
+Get the python code of the figures from
+\begin{table}[h]
+\large
+\centering
+\framebox{
+\url{https://github.com/kkousar/KOUSAR_FWC/blob/main/matrices/line/code/line.py}}
+\bibliographystyle{ieeetr}
+
+\end{table}
+
+
+
+\end{document}
