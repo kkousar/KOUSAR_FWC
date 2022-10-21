@@ -1,12 +1,11 @@
 /*==========================================================
-Code by G V V Sharma
 Apr 9, 2021,
 Released under GNU/GPL
 https://www.gnu.org/licenses/gpl-3.0.en.html
 /*==========================================================
  *
  *    File   : main.c
- *    Purpose: main for Pygmy Seven Segment Display Counter
+ *    Purpose: main for Pygmy LCD display
  *                                                          
  *=========================================================*/
 
@@ -51,7 +50,7 @@ static void nvic_init(void);
 
 typedef uint8_t byte; // changed the name
 
-#define LCD_RS 10 // pin for LCD R/S (eg PB0)
+#define LCD_RS 10 // pin for LCD R/S 
 #define LCD_E 8 // pin for LCD enable
 #define DAT4 7 // pin for pygmy7
 #define DAT5 6 // pin for pygmy6
@@ -245,7 +244,7 @@ int PyHal_GPIO_Get(uint8_t gpionum)
 
     return ((int)gpioval_input);
 }
-//initializing functions
+//declaring functions
 
 void LCD_setup(void)
 
