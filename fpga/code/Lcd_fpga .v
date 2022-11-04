@@ -7,9 +7,10 @@ qlal4s3b_cell_macro u_qlal4s3b_cell_macro (
 integer i = 1;
 reg [25:0] count=0;
 reg [3:0] Datas [1:41];
-integer a1=2;
+	//code for sum of two numbers
+integer a1=2;//20
 integer a0=0;
-integer b1=4;
+integer b1=4;//40
 integer b0=0;
 integer sum0,sum1,b,a00,a01,b10,b11;
 assign sum0=a0+b0;
@@ -56,7 +57,7 @@ Datas[13]  =  4'h8; //starting from line 1
 Datas[14]  =  4'h0;
 Datas[15]  =  1'b1;
 Datas[16]  =  4'h5;//T=0X54
-Datas[17]  =  4'h4;    //--letter'p'-
+Datas[17]  =  4'h4;   
 Datas[18]  =  4'h4;//H==0X48
 Datas[19]  =  4'h8;
 Datas[20]  =  4'h4;//E=0X45;       
@@ -75,7 +76,7 @@ Datas[32]  =  4'h4;//I=0X49
 Datas[33]  =  4'h9;
 Datas[34]  =  4'h5;//S=0X53
 Datas[35]  =  4'h3;
-Datas[36]  =  4'h2;
+	Datas[36]  =  4'h2;//space=0x20
 Datas[37]  =  4'h0;
 Datas[38]  =b10;
 Datas[39]  =b11;
@@ -87,7 +88,7 @@ if (i<=14)begin
 	LCD_RS<=1'b0;
 	DATA=Datas[i];
 	LCD_E<=1'b1;
-	if (count==800)begin
+	if (count==800)begin //waiting 40us
    		LCD_E<=1'b0;
    		count<=0;
    		i <= i + 1;
@@ -97,7 +98,7 @@ if (i<=14)begin
 
 	end
 if (i==15) begin
-	if (count==60000)begin
+	if (count==60000)begin//waiting 3ms
      		count<=0;
      		i<=i+1;
      		end
@@ -108,7 +109,7 @@ if (i>15 & i<=41) begin
 	LCD_RS<=1'b1;
 	DATA=Datas[i];
         LCD_E<=1'b1;
-        if (count==800)begin
+	if (count==800)begin //waiting 40us
 	    LCD_E<=1'b0;
 	    count<=0;
             i <= i + 1;
