@@ -1,7 +1,7 @@
 How To
 ======
 
-Build FPGA and M4
+Build FPGA 
 ----------
 
 From the project root dir, execute:
@@ -13,8 +13,8 @@ From the project root dir, execute:
   This will generate a :code:`lcd_fpga.bin`  which can be flashed.
 
 
-Flash FPGA and M4
-------------------
+Flash FPGA 
+----------
 
 Put the Vaman board into Flash Mode.make sure the connections of board and Lcd should be as shown in the pdf
 
