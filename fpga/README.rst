@@ -1,3 +1,7 @@
+16x2-LCD-Controller-VERILOG
+===========================
+I had written a verilog code to interface fpga and LCD 16x2 and print characters on LCD
+
 How To
 ======
 
