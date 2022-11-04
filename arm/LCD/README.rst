@@ -1,4 +1,4 @@
-16x2-LCD-Controller-VERILOG
+16x2-LCD-Controller-ARM
 ===========================
 I had written a code for ARM programming using Vaman to interface  LCD 16x2 and print characters on LCD
 
