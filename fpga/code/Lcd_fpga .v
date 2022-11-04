@@ -39,6 +39,7 @@ initial begin
 		else begin
 			b10=3;                                 b11=b;end
 end
+	//end of code for sum of two numbers
 end
 always @(posedge clk) begin
 Datas[1]   =  4'h3;   	//-- initializing controller--
