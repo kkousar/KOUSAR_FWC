@@ -3,7 +3,7 @@ module helloworldfpga(output reg LCD_RS,output reg LCD_E,output reg[7:4] DATA);
 wire clk;
 qlal4s3b_cell_macro u_qlal4s3b_cell_macro (
 	.Sys_Clk0 (clk),
-);
+);//20Mhz clock
 integer i = 1;
 reg [25:0] count=0;
 reg [3:0] Datas [1:41];
